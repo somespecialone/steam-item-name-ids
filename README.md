@@ -7,6 +7,13 @@
 
 List of `steammarket` item name id. Needed to fetch `itemhistogram` of some item.
 
+---
+
+### Does not include all items fow now.
+### ⚠ All are welcome to complete the list ⚠
+
+---
+
 > GET https://steamcommunity.com/market/itemordershistogram
 
 with params
