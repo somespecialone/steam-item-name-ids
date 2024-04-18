@@ -1,33 +1,60 @@
-# <p align="center">Steam item name ids</p>
-
----
+# Steam item name ids
 
 [![license](https://img.shields.io/github/license/somespecialone/steam-item-name-ids)](https://github.com/somespecialone/steam-item-name-ids/blob/master/LICENSE)
 [![steam](https://shields.io/badge/steam-1b2838?logo=steam)](https://store.steampowered.com/)
 
-List of `steammarket` item name id. Needed to fetch `itemhistogram` of some item.
+List of `steammarket` item name id. Required to get the `itemordershistogram` of an item.
 
----
+> [!WARNING]
+> Does not include all items.
 
-### Does not include all items fow now.
-### ⚠ All are welcome to complete the list ⚠
+## Apps:
 
----
+- [x] CS2 (ex. CSGO, [cs2.json](./data/cs2.json)/[csgo.json](./data/csgo.json))
+- [x] TF2
+
+## Usage
+
+### Structure
+
+Each file is a dump of a `JSON` object with `market hash name` as key and `item_nameid` as value.
+
+```json
+{ "market hash name": 1234567 }
+```
+
+### How to get
+
+#### Path
 
 > GET https://steamcommunity.com/market/itemordershistogram
 
-with params
+#### Params:
+
+| Parameter name | Type            | Reference/Description                                                                                                                    |
+| -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| country        | string          | Country code like "UA", "PL"                                                                                                             |
+| language       | string          | [Language enum](https://github.com/somespecialone/aiosteampy/blob/22af4c174445332de3cc01d8c23f715246ee0902/aiosteampy/constants.py#L126) |
+| currency       | integer         | [Currency enum](https://github.com/somespecialone/aiosteampy/blob/22af4c174445332de3cc01d8c23f715246ee0902/aiosteampy/constants.py#L60)  |
+| item_nameid    | integer         | 👈                                                                                                                                       |
+| norender       | integer/boolean | Whether to exclude `html` from the response                                                                                              |
+
+**Example** params object:
 
 ```json5
 {
-  "country": "UA",
-  "language": "ukrainian",
-  "currency": 18,
-  "item_nameid": 123456, // item id there
-  "norender": 1
+  country: "UA",
+  language: "ukrainian",
+  currency: 18, // Ukrainian Hryvnia
+  item_nameid: 123456, // <- item name id
+  norender: 1, // exclude
 }
 ```
 
-**Example**:
-> https://steamcommunity.com/market/itemordershistogram?country=UA&language=ukrainian&currency=18&item_nameid=49399568&norender=1
-> 
+**Example** `itemordershistogram` of [AK-47 | Slate (Field-Tested)](https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Slate%20%28Field-Tested%29) request `URL`:
+
+> https://steamcommunity.com/market/itemordershistogram?country=UA&language=ukrainian&currency=18&item_nameid=176241017&norender=1
+
+## See also 👀
+
+- [Aiosteampy "fetch_item_orders_histogram" method](https://github.com/somespecialone/aiosteampy/blob/22af4c174445332de3cc01d8c23f715246ee0902/aiosteampy/public.py#L186)
