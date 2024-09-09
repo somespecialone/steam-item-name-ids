@@ -8,6 +8,9 @@ List of `steammarket` item name id. Required to get the `itemordershistogram` of
 > [!WARNING]
 > Does not include all items.
 
+> [!IMPORTANT]
+> Consider using `cs2.json` instead of deprecated `csgo.json` for `CS2 Steam App`.
+
 ## Apps:
 
 - [x] CS2 (ex. CSGO, [cs2.json](./data/cs2.json)/[csgo.json](./data/csgo.json))
@@ -55,6 +58,11 @@ Each file is a dump of a `JSON` object with `market hash name` as key and `item_
 
 > https://steamcommunity.com/market/itemordershistogram?country=UA&language=ukrainian&currency=18&item_nameid=176241017&norender=1
 
+## TODO 📃
+
+- [ ] `github action` that validates `json` files for pull requests
+
 ## See also 👀
 
 - [Aiosteampy "fetch_item_orders_histogram" method](https://github.com/somespecialone/aiosteampy/blob/22af4c174445332de3cc01d8c23f715246ee0902/aiosteampy/public.py#L186)
+

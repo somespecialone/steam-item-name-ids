@@ -3801,7 +3801,6 @@
   "P90 | Traction (Well-Worn)": 175999907,
   "P90 | Trigon (Battle-Scarred)": 7178722,
   "P90 | Trigon (Field-Tested)": 7178683,
-  "P90 | Trigon (Field-Tested)\n": 7178683,
   "P90 | Trigon (Minimal Wear)": 7178895,
   "P90 | Trigon (Well-Worn)": 7178672,
   "P90 | Verdant Growth (Battle-Scarred)": 176262776,
@@ -21127,5 +21126,9 @@
   "★ Talon Knife | Night Stripe (Battle-Scarred)": 176000494,
   "★ Talon Knife | Safari Mesh (Factory New)": 176031545,
   "★ Ursus Knife | Blue Steel (Factory New)": 176001924,
-  "AWP | Duality (Field-Tested)": 176359763
+  "AWP | Duality (Field-Tested)": 176359763,
+  "StatTrak™ SSG 08 | Dezastre (Minimal Wear)": 176414047,
+  "StatTrak™ Nova | Dark Sigil (Minimal Wear)": 176414135,
+  "StatTrak™ MAC-10 | Light Box (Minimal Wear)": 176414100,
+  "StatTrak™ MAC-10 | Light Box (Field-Tested)": 176414111
 }
