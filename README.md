@@ -3,17 +3,14 @@
 [![license](https://img.shields.io/github/license/somespecialone/steam-item-name-ids)](https://github.com/somespecialone/steam-item-name-ids/blob/master/LICENSE)
 [![steam](https://shields.io/badge/steam-1b2838?logo=steam)](https://store.steampowered.com/)
 
-List of `steammarket` item name id. Required to get the `itemordershistogram` of an item.
+List of `SteamMarket` item name id. Required to get the `itemordershistogram` of an item.
 
 > [!WARNING]
 > Does not include all items.
 
-> [!IMPORTANT]
-> Consider using `cs2.json` instead of deprecated `csgo.json` for `CS2 Steam App`.
-
 ## Apps:
 
-- [x] CS2 (ex. CSGO, [cs2.json](./data/cs2.json)/[csgo.json](./data/csgo.json))
+- [x] CS2 (ex. CSGO)
 - [x] TF2
 
 ## Usage
@@ -61,8 +58,8 @@ Each file is a dump of a `JSON` object with `market hash name` as key and `item_
 ## TODO 📃
 
 - [ ] `github action` that validates `json` files for pull requests
+- [ ] `github action` that creates `csv` files from originated `json` files for each pull request/commit
 
 ## See also 👀
 
-- [Aiosteampy "fetch_item_orders_histogram" method](https://github.com/somespecialone/aiosteampy/blob/22af4c174445332de3cc01d8c23f715246ee0902/aiosteampy/public.py#L186)
-
+- [Aiosteampy "fetch_item_orders_histogram" method](https://github.com/somespecialone/aiosteampy/blob/2a9af23dfe94550887e6643c1c130edbf2ef98f8/aiosteampy/mixins/public.py#L362)
